@@ -20,3 +20,20 @@ For example:
 So the distance between “Diana Shipping” and “Howden” is around 2.27. This means that the two businesses are somewhat dissimilar. A distance of 0 means that the two organizations are identical.
 
 The *main.py* python script is used for running the algorithm. 
+
+### Technical Details:
+The algorithm applied was linear nearest-neighbor search. It is a euclidean distance-based algorithm, which works effectively for the relatively small dataset. Later on this can be changed for some probabilistic model if the calculations ever become too time-prohibitive.
+
+### Quick Start
+
+For help with the script, execute
+
+```console
+foo@bar:~$ python3 main.py -h
+```
+
+To use the script, execute
+
+```console
+foo@bar:~$ main.py -c <recalculate distance matrix T/F> -b <business name> -n <number of similar businesses>
+```
