@@ -1,4 +1,4 @@
-## Nearest-Neighbor Recommender Documentation
+# Nearest-Neighbor Recommender Documentation
 
 ### Introduction:
 
@@ -37,3 +37,10 @@ To use the script, execute
 ```console
 foo@bar:~$ main.py -c <recalculate distance matrix T/F> -b <business name> -n <number of similar businesses>
 ```
+
+Specifying True for the -c parameter does the data processing and euclidean calculations again, outputting a new distances.csv file. This is good for when new data is introduced and the calculations must be done again. Specifying False skips this step.
+
+-b accepts a string input business name, which is used to look up the distance on distances.csv. No identifying keys were used since they will most likely not work with the systems currently in place, though this is usually not a good implementation.
+
+-n an integer specifying how many most similar businesses to return. Must be length - 2 of the available dataset.
+
