@@ -59,8 +59,15 @@ Loads the csv files into pandas Dataframes.
 
 ### process_data()
 
-This step takes in the primary dataframe and transforms the String type waste streams of the “MATERIAL GROUP” column into lists. Next, it combines and counts the individual occurrences of each waste stream. Waste streams that have appeared less than once are discarded from the data as they would lead to excess dimensionality, making the calculations unreliable. Then, the numeric data is linearly scaled to values between 0 and 1. The categorical “MATERIAL GROUP” and “SECTOR” variables are one-hot-encoded, meaning that they have been transformed into a binary format. The columns which are no longer useful in the data are dropped. Finally, find_similar(pd Dataframe df1) is called on the dataframe to calculate the euclidean feature distances between each pairwise combination of the businesses. The distances are saved in a csv in the project domain.
+This step takes in the primary dataframe and transforms the String type waste streams of the “MATERIAL GROUP” column into lists. Next, it combines and counts the individual occurrences of each waste stream. Waste streams that have appeared less than once are discarded from the data as they would lead to excess dimensionality, making the calculations unreliable. Then, the numeric data is linearly scaled to values between 0 and 1. The categorical “MATERIAL GROUP” and “SECTOR” variables are one-hot-encoded, meaning that they have been transformed into a binary format. The columns which are no longer useful in the data are dropped. Finally, **find_similar(pd Dataframe df1)** is called on the dataframe to calculate the euclidean feature distances between each pairwise combination of the businesses. The distances are saved in a csv in the project domain.
 
-Next, find_n_similar(String business, Int n) is called. This takes in our business of choice represented as a string, and from the distances.csv, finds the top n businesses with the lowest distances. This can then be returned as output of any sort. Currently it prints out the dataframe and returns the top n businesses, though this can be easily adjusted to save this information somewhere.
+Next, **find_n_similar(String business, Int n)** is called. This takes in our business of choice represented as a string, and from the distances.csv, finds the top n businesses with the lowest distances. This can then be returned as output of any sort. Currently it prints out the dataframe and returns the top n businesses, though this can be easily adjusted to save this information somewhere.
 
+## Notes:
+Due to unclear requirements surrounding the input standardization of the backend architecture, all inputs are currently case-sensitive. Business names need to be entered exactly as they appear on the List_B2B.csv.
+
+Currently, the algorithm has no output. This has been done purposefully to leave it open to the engineers to work out in what format they need their output to use the implementation.
+
+## Suggestions:
+A suitable backend and interface needs to be implemented to support this nearest-neighbor implementation. In addition, more features can be added to capture similarity between businesses more accurately, such as size of the client’s facilities combined in square feet.
 
