@@ -45,19 +45,19 @@ Specifying True for the -c parameter does the data processing and euclidean calc
 
 -n an integer specifying how many most similar businesses to return. Must be length - 2 of the available dataset.
 
-##Main.py
+## Main.py
 
 Data Loading and Processing:
 
-###complete_pipeline()
+### complete_pipeline()
 
 This function specifies the three steps of loading, cleaning and preprocessing the data. Each of these steps has its own function.
 
-###load_in_dataset()
+### load_in_dataset()
 
 Loads the csv files into pandas Dataframes.
 
-###process_data()
+### process_data()
 
 This step takes in the primary dataframe and transforms the String type waste streams of the “MATERIAL GROUP” column into lists. Next, it combines and counts the individual occurrences of each waste stream. Waste streams that have appeared less than once are discarded from the data as they would lead to excess dimensionality, making the calculations unreliable. Then, the numeric data is linearly scaled to values between 0 and 1. The categorical “MATERIAL GROUP” and “SECTOR” variables are one-hot-encoded, meaning that they have been transformed into a binary format. The columns which are no longer useful in the data are dropped. Finally, find_similar(pd Dataframe df1) is called on the dataframe to calculate the euclidean feature distances between each pairwise combination of the businesses. The distances are saved in a csv in the project domain.
 
