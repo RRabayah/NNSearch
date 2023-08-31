@@ -1,10 +1,10 @@
-### Nearest-Neighbor Recommender Documentation
+## Nearest-Neighbor Recommender Documentation
 
-## Introduction:
+### Introduction:
 
 This is a linear euclidean distance nearest-neighbor implementation for finding businesses which are most similar to any given client’s businesses. This will be used to provide a front-end display for clients to compare their waste-generation to other clients.
 
-## Project Structure:
+### Project Structure:
 
 *Pipeline.ipynb* is a jupyter notebook used mainly for experimentation and research during development. It is included in the structure only for future iterative development. 
 
