@@ -15,7 +15,7 @@ The *Data* folder contains two .csv files, *distances.csv* which holds the calcu
 For example:
 
 | , | from | to | distance |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | 0 | Diana Shipping | HOWDEN | 2.265509404818966 |
 
 So the distance between “Diana Shipping” and “Howden” is around 2.27. This means that the two businesses are somewhat dissimilar. A distance of 0 means that the two organizations are identical.
